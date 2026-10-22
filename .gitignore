@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# 用户指定忽略
+*.md
+*.txt
+.workbuddy/
