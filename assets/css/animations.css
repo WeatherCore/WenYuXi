@@ -1,0 +1,30 @@
+/* ========== animations.css · 动画系统 ========== */
+
+/* ---------- 逐段渐显 ---------- */
+.js .fade{opacity:0;transform:translateY(22px)}
+.js .fade.from-left{transform:translate(-28px,16px)}
+.js .fade.from-right{transform:translate(28px,16px)}
+.js .fade.in{opacity:1;transform:none;
+             transition:opacity 1.1s ease,transform 1.1s cubic-bezier(.2,.65,.25,1)}
+
+/* ---------- 关键帧 ---------- */
+@keyframes drift1{to{transform:translate(6vmax,5vmax) scale(1.08)}}
+@keyframes drift2{to{transform:translate(-5vmax,6vmax) scale(1.06)}}
+@keyframes drift3{to{transform:translate(4vmax,-6vmax) scale(1.1)}}
+@keyframes gild{from{background-position:0% 50%}to{background-position:100% 50%}}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.6)}50%{opacity:.9;transform:scale(1)}}
+@keyframes float{50%{transform:translateY(-9px)}}
+@keyframes pulse{50%{opacity:.45}}
+@keyframes ring{50%{box-shadow:0 8px 22px rgba(160,120,80,.18),0 0 0 8px rgba(222,188,140,.15)}}
+@keyframes chev{50%{transform:translateY(7px);opacity:.55}}
+@keyframes beat{35%{transform:scale(1.25)}}
+@keyframes burstUp{to{transform:translate(var(--dx),var(--dy)) scale(var(--s));opacity:0}}
+
+/* ---------- 减弱动态（无障碍） ---------- */
+@media (prefers-reduced-motion: reduce){
+  .aurora i,.env-stage,.env-hint,.sp,.music.on,.gild,
+  .scroll-hint svg,.heart-btn.beat svg{animation:none!important}
+  .js .fade{opacity:1;transform:none;transition:none}
+  .wish-inner{transition-duration:.2s}
+  .env-flap,.env-letter,.env-seal,.overlay,.round-btn,.photo,.tl-card{transition-duration:.3s;transition-delay:0s}
+}
