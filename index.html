@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>致我最亲爱的你 · 一封给你的信</title>
+<meta name="description" content="一封写给最亲爱的你的信：情书、时光相册、我们的故事，和想对你说的话。">
+<meta name="theme-color" content="#faf3ec">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23c98a92' d='M12 21s-7.5-4.9-9.5-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.5 12c-2 4.1-9.5 9-9.5 9z'/></svg>">
+<link rel="preconnect" href="https://fonts.loli.net">
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin>
+<link href="https://fonts.loli.net/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/envelope.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body class="locked">
+
+<div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div id="glow" aria-hidden="true"></div>
+
+<!-- ============ 信封开场 ============ -->
+<div class="overlay" id="overlay">
+  <div class="env-stage">
+    <button class="envelope" id="envelope" aria-label="轻触开启这封信">
+      <span class="env-back"></span>
+      <span class="env-letter">
+        <svg class="env-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20C12 20 4 15 4 9.5 4 6 6.5 4 9 4c1.8 0 2.8 1 3 2 .2-1 1.2-2 3-2 2.5 0 5 2 5 5.5C20 15 12 20 12 20Z"/></svg>
+        <span class="env-letter-title">致我最亲爱的你</span>
+        <i class="l1"></i><i class="l2"></i><i class="l3"></i>
+      </span>
+      <span class="env-pocket"></span>
+      <span class="env-flap"></span>
+      <span class="env-seal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20C12 20 4 15 4 9.5 4 6 6.5 4 9 4c1.8 0 2.8 1 3 2 .2-1 1.2-2 3-2 2.5 0 5 2 5 5.5C20 15 12 20 12 20Z"/></svg>
+      </span>
+      <i class="sp s1"></i><i class="sp s2"></i><i class="sp s3"></i><i class="sp s4"></i>
+    </button>
+    <p class="env-hint">轻触开启这封信</p>
+  </div>
+</div>
+
+<!-- ============ 侧边章节导航（桌面端） ============ -->
+<nav class="dotnav" id="dotnav" aria-label="页面章节导航">
+  <a href="#hero" class="dot" data-label="扉页"></a>
+  <a href="#letter" class="dot" data-label="情书"></a>
+  <a href="#gallery" class="dot" data-label="时光相册"></a>
+  <a href="#timeline" class="dot" data-label="我们的故事"></a>
+  <a href="#wishes" class="dot" data-label="想对你说"></a>
+  <a href="#ending" class="dot" data-label="往后余生"></a>
+</nav>
+
+<main>
+  <!-- ============ 扉页 ============ -->
+  <section id="hero" class="hero">
+    <p class="hero-eyebrow fade">A LOVE LETTER FOR YOU</p>
+    <h1 class="gild fade">致我最亲爱的你</h1>
+    <p class="hero-poem fade">见字如面 · 展信舒颜</p>
+    <div class="hero-days fade" id="heroDays">
+      <p class="days-label">这是我们在一起的</p>
+      <div class="days-row">
+        <span class="days-num gild" id="daysNum">0</span>
+        <span class="days-unit">天</span>
+      </div>
+    </div>
+    <div class="scroll-hint fade" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      <span>向下滚动 · 开启我们的故事</span>
+    </div>
+  </section>
+
+  <!-- ============ 情书 ============ -->
+  <section id="letter" class="section letter-sec">
+    <article class="letter">
+      <span class="postmark" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="#b98a44" stroke-width="2"/>
+          <circle cx="50" cy="50" r="37" fill="none" stroke="#b98a44" stroke-width="1" stroke-dasharray="3 4"/>
+          <path fill="#b98a44" d="M50 30C50 30 34 18 26 28 18 38 28 52 50 68 72 52 82 38 74 28 66 18 50 30 50 30Z"/>
+        </svg>
+      </span>
+
+      <svg class="orn fade" viewBox="0 0 180 16" aria-hidden="true">
+        <line x1="10" y1="8" x2="72" y2="8" stroke="#d3b581" stroke-width="1"/>
+        <circle cx="80" cy="8" r="1.6" fill="#d3b581"/>
+        <rect x="87" y="4" width="8" height="8" fill="none" stroke="#cfa763" transform="rotate(45 91 8)"/>
+        <circle cx="102" cy="8" r="1.6" fill="#d3b581"/>
+        <line x1="110" y1="8" x2="170" y2="8" stroke="#d3b581" stroke-width="1"/>
+      </svg>
+      <h2 class="gild fade">致我最亲爱的你</h2>
+      <p class="sub fade">FOR MY DEAREST</p>
+
+      <svg class="flourish fade" viewBox="0 0 260 36" aria-hidden="true">
+        <line x1="6" y1="18" x2="104" y2="18" stroke="#d3b581" stroke-width="1"/>
+        <circle cx="112" cy="18" r="1.8" fill="#d3b581"/>
+        <path d="M130 12.5c-6.5-5-13-2.2-13 2.8 0 4.2 6.8 8.6 13 12.2 6.2-3.6 13-8 13-12.2 0-5-6.5-7.8-13-2.8z" fill="#cfa763" opacity=".85"/>
+        <circle cx="148" cy="18" r="1.8" fill="#d3b581"/>
+        <line x1="156" y1="18" x2="254" y2="18" stroke="#d3b581" stroke-width="1"/>
+      </svg>
+
+      <!-- ======== 情书原文（要改信的内容就改这里，保持段落结构） ======== -->
+      <p class="salute fade">亲爱的：</p>
+
+      <p class="body-p fade">提笔的时候，我才发现“喜欢”这两个字，我练习了千万遍，落到纸上却还是觉得不够。世界那么大，人来人往，可我的目光总是不由自主地落在你身上——你笑起来的时候，连平淡的日子都亮了。</p>
+
+      <p class="body-p fade">我喜欢你，不只是喜欢你的样子，更喜欢和你在一起时，那个慢慢变得更好的自己。因为你，我学会了耐心，学会了温柔，学会把“我”慢慢变成“我们”。你随口提过的小事，我都记得；你不经意皱起的眉头，都让我心疼。原来爱一个人，是把她的一切都放在心上，像收藏最珍贵的宝物。</p>
+
+      <p class="body-p fade">我知道，未来的路不会永远铺满玫瑰。会有争吵，会有疲惫，会有柴米油盐的琐碎。但我想要的人是你——清晨想和你一起醒来，雨天想和你共撑一把伞，老了我还想牵着你的手，在夕阳下慢慢走。日子很长，我想和你一天一天地过；故事很多，我想和你一页一页地写。</p>
+
+      <p class="body-p fade">谢谢你出现在我的生命里。<em class="hl">往后余生，风雪是你，平淡是你；心底温柔是你，目光所至，也是你。</em></p>
+
+      <footer class="sign fade">
+        <p class="name gild">永远爱你的哥哥</p>
+        <p class="date">写于某个想你至深的夜晚</p>
+      </footer>
+
+      <svg class="endorn fade" viewBox="0 0 120 26" aria-hidden="true">
+        <line x1="8" y1="13" x2="44" y2="13" stroke="#d8bd8b" stroke-width="1"/>
+        <path d="M60 10.5c-2.6-2-5.2-.9-5.2 1.1 0 1.7 2.7 3.4 5.2 4.9 2.5-1.5 5.2-3.2 5.2-4.9 0-2-2.6-3.1-5.2-1.1z" fill="#cfa763"/>
+        <line x1="76" y1="13" x2="112" y2="13" stroke="#d8bd8b" stroke-width="1"/>
+      </svg>
+    </article>
+  </section>
+
+  <!-- ============ 时光相册 ============ -->
+  <section id="gallery" class="section gallery-sec">
+    <div class="sec-head fade">
+      <span class="sec-en">OUR MOMENTS</span>
+      <h2 class="sec-title">时光相册</h2>
+      <svg class="sec-line" viewBox="0 0 120 12" aria-hidden="true">
+        <line x1="4" y1="6" x2="46" y2="6" stroke="#d3b581" stroke-width="1"/>
+        <rect x="55.5" y="1.5" width="7" height="7" fill="none" stroke="#cfa763" transform="rotate(45 59 5)"/>
+        <line x1="74" y1="6" x2="116" y2="6" stroke="#d3b581" stroke-width="1"/>
+      </svg>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </section>
+
+  <!-- ============ 我们的故事 ============ -->
+  <section id="timeline" class="section timeline-sec">
+    <div class="sec-head fade">
+      <span class="sec-en">OUR STORY</span>
+      <h2 class="sec-title">我们的故事</h2>
+      <svg class="sec-line" viewBox="0 0 120 12" aria-hidden="true">
+        <line x1="4" y1="6" x2="46" y2="6" stroke="#d3b581" stroke-width="1"/>
+        <rect x="55.5" y="1.5" width="7" height="7" fill="none" stroke="#cfa763" transform="rotate(45 59 5)"/>
+        <line x1="74" y1="6" x2="116" y2="6" stroke="#d3b581" stroke-width="1"/>
+      </svg>
+    </div>
+    <ol class="tl" id="tlList"></ol>
+  </section>
+
+  <!-- ============ 想对你说 ============ -->
+  <section id="wishes" class="section wishes-sec">
+    <div class="sec-head fade">
+      <span class="sec-en">LITTLE WISHES</span>
+      <h2 class="sec-title">想对你说</h2>
+      <svg class="sec-line" viewBox="0 0 120 12" aria-hidden="true">
+        <line x1="4" y1="6" x2="46" y2="6" stroke="#d3b581" stroke-width="1"/>
+        <rect x="55.5" y="1.5" width="7" height="7" fill="none" stroke="#cfa763" transform="rotate(45 59 5)"/>
+        <line x1="74" y1="6" x2="116" y2="6" stroke="#d3b581" stroke-width="1"/>
+      </svg>
+    </div>
+    <p class="sec-sub fade">每一张卡片，都是一句没说出口的喜欢</p>
+    <div class="wish-grid" id="wishGrid"></div>
+  </section>
+
+  <!-- ============ 往后余生 ============ -->
+  <section id="ending" class="section ending">
+    <h2 class="end-title gild fade" id="endTitle">往后余生，都是你</h2>
+    <p class="end-sub fade" id="endSub">这颗心，会一直为你跳动</p>
+    <button class="heart-btn fade" id="heartBtn" aria-label="让这颗心为你跳动">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20C12 20 4 15 4 9.5 4 6 6.5 4 9 4c1.8 0 2.8 1 3 2 .2-1 1.2-2 3-2 2.5 0 5 2 5 5.5C20 15 12 20 12 20Z"/></svg>
+    </button>
+    <p class="beat-count fade" id="beatCount" aria-live="polite"></p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20C12 20 4 15 4 9.5 4 6 6.5 4 9 4c1.8 0 2.8 1 3 2 .2-1 1.2-2 3-2 2.5 0 5 2 5 5.5C20 15 12 20 12 20Z"/></svg>
+  <span id="footText">以爱之名 · 为你而作</span>
+</footer>
+
+<button id="backTop" class="round-btn backtop" aria-label="回到顶部" title="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+<button id="musicBtn" class="round-btn music" title="轻柔钢琴（点击开关）" aria-pressed="false" aria-label="播放或暂停轻音乐">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+    <line class="slash" x1="4" y1="4" x2="20" y2="20"/>
+  </svg>
+</button>
+
+<noscript><style>#overlay{display:none}body.locked{overflow:auto;height:auto}</style></noscript>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/envelope.js"></script>
+<script src="assets/js/reveal.js"></script>
+<script src="assets/js/music.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
