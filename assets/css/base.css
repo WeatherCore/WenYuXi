@@ -1,0 +1,69 @@
+/* ========== base.css · 变量 / 全局背景 / 全局组件 ========== */
+:root{
+  --ink:#4f3f36;
+  --ink-soft:#6d5a4f;
+  --muted:#96806f;
+  --gold:#b98a44;
+  --gold-deep:#8a6420;
+  --gold-light:#e9cf9a;
+  --rose:#c98a92;
+  --rose-deep:#b06a74;
+  --paper:rgba(255,253,248,.96);
+  --line:rgba(200,160,105,.32);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:hidden;scroll-behavior:smooth}
+body{
+  font-family:'Noto Serif SC','Source Han Serif SC','Songti SC','STSong','SimSun',serif;
+  color:var(--ink);
+  background:linear-gradient(160deg,#fdf9f3 0%,#faf1ea 45%,#f3ecf6 100%) fixed;
+  overflow-x:hidden;min-height:100vh;
+}
+body.locked{overflow:hidden;height:100vh;height:100dvh}
+::selection{background:rgba(222,188,140,.4)}
+body::-webkit-scrollbar{width:9px}
+body::-webkit-scrollbar-thumb{background:rgba(200,160,105,.35);border-radius:9px}
+body::-webkit-scrollbar-track{background:transparent}
+
+/* ---------- 背景氛围光 ---------- */
+.aurora{position:fixed;inset:-18%;z-index:0;filter:blur(70px);pointer-events:none}
+.aurora i{position:absolute;border-radius:50%;opacity:.55}
+.a1{width:56vmax;height:56vmax;left:-14vmax;top:-16vmax;
+    background:radial-gradient(circle at 40% 40%,rgba(244,212,214,.85),transparent 65%);
+    animation:drift1 26s ease-in-out infinite alternate}
+.a2{width:48vmax;height:48vmax;right:-14vmax;top:6vmax;
+    background:radial-gradient(circle at 55% 45%,rgba(226,212,240,.8),transparent 65%);
+    animation:drift2 32s ease-in-out infinite alternate}
+.a3{width:52vmax;height:52vmax;left:16vmax;bottom:-26vmax;
+    background:radial-gradient(circle at 50% 50%,rgba(240,220,190,.78),transparent 62%);
+    animation:drift3 38s ease-in-out infinite alternate}
+
+#sky{position:fixed;inset:0;z-index:1;pointer-events:none}
+#glow{position:fixed;left:-999px;top:-999px;width:360px;height:360px;margin:-180px 0 0 -180px;
+      border-radius:50%;pointer-events:none;z-index:2;opacity:0;transition:opacity .8s ease;
+      background:radial-gradient(circle,rgba(255,216,166,.2),rgba(255,216,166,0) 65%)}
+main,footer{position:relative;z-index:3}
+
+/* ---------- 烫金文字 ---------- */
+.gild{background:linear-gradient(105deg,#8a6420 0%,#c9a25f 22%,#eedaa4 42%,#b98a44 62%,#8a6420 82%,#d9b878 100%);
+      background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+      animation:gild 9s ease-in-out infinite alternate;
+      filter:drop-shadow(0 2px 12px rgba(214,178,112,.3))}
+
+/* ---------- 圆形悬浮按钮（音乐 / 回顶） ---------- */
+.round-btn{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom));
+       width:48px;height:48px;border-radius:50%;border:1px solid rgba(185,138,68,.45);
+       background:rgba(255,252,246,.85);color:#a3814e;cursor:pointer;z-index:40;
+       display:flex;align-items:center;justify-content:center;
+       box-shadow:0 8px 22px rgba(160,120,80,.18);
+       transition:opacity .8s ease,transform .8s ease,box-shadow .3s}
+.round-btn svg{width:19px;height:19px}
+.round-btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.round-btn:hover{box-shadow:0 10px 26px rgba(160,120,80,.26)}
+.music{right:max(16px,env(safe-area-inset-right));opacity:0;pointer-events:none;transform:translateY(8px)}
+.music.show{opacity:1;pointer-events:auto;transform:none}
+.music .slash{opacity:.85;stroke:#c98a92;transition:opacity .3s}
+.music.on .slash{opacity:0}
+.music.on{color:#8f6a2e;animation:ring 3s ease-in-out infinite}
+.backtop{left:max(16px,env(safe-area-inset-left));opacity:0;pointer-events:none;transform:translateY(8px)}
+.backtop.show{opacity:1;pointer-events:auto;transform:none}
