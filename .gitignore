@@ -223,3 +223,7 @@ __marimo__/
 *.md
 *.txt
 .workbuddy/
+
+# 情书原稿与 Office 临时文件不上传
+*.docx
+~$*
